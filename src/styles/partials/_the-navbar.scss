@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 2rem 10px;
+  max-width: 1400px;
+  margin: auto;
+  justify-content: space-between;
+
+  @include lg() {
+    padding: 2rem;
+  }
+
+  &__link {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $darkBlue;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    sub {
+      font-size: 14px;
+      text-transform: lowercase;
+    }
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    padding: 5px;
+
+    div {
+      width: 20px;
+      height: 2px;
+      margin: 4px;
+      background: $darkBlue;
+    }
+  }
+}

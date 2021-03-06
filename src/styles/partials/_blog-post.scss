@@ -1,0 +1,73 @@
+.blog {
+  $root: &;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(#000, 0.2);
+  transition: all 0.3s ease-in-out;
+
+  @include lg() {
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    display: block;
+    border-radius: 3px 3px 0 0;
+  }
+
+  &__article {
+    padding: 2rem 1rem;
+    color: $darkBlue;
+  }
+
+  &__title {
+    padding: 0 0 1rem 0;
+    font-weight: 400;
+  }
+
+  &__text {
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  &__thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+  }
+
+  &__author {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__occupation {
+    font-size: 11px;
+    color: #999;
+  }
+
+  &__timestamp {
+    @extend #{$root}__occupation;
+    font-weight: 400;
+  }
+}

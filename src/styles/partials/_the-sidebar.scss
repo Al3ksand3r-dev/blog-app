@@ -1,0 +1,76 @@
+.sidebar {
+  $root: &;
+  min-width: 100%;
+  min-height: 100%;
+  background: #fff;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+
+    #{$root}__close-btn {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.2s ease-in-out 0.5s;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 4rem;
+    font-weight: 300;
+    color: $darkBlue;
+    transform: translateY(20px);
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+
+    @include md() {
+      font-size: 5rem;
+      right: 2rem;
+    }
+  }
+
+  &__list {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 10px;
+    margin: 2rem 0;
+    transition: all 0.2s ease-in-out;
+
+    @include lg() {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__link {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+
+    @include md() {
+      font-size: 38px;
+    }
+  }
+}
