@@ -1,13 +1,10 @@
 .form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  margin: auto;
   padding: 2rem 10px;
   border-radius: 5px;
   overflow-y: auto;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 0 15px rgba(#000, 0.2);
-  transform: translate(-50%, -50%);
 
   @include md() {
     padding: 2rem;
